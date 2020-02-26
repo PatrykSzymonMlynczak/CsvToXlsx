@@ -38,10 +38,8 @@ public class TakeCsvMakeXlsx {
                 Cell cell = row.createCell(cellnum++);
                 if(obj instanceof String)
                     cell.setCellValue((String)obj);
-
             }
             line = br.readLine();
-
         }
 
         try
@@ -56,8 +54,6 @@ public class TakeCsvMakeXlsx {
         {
             e.printStackTrace();
         }
-
-
 
     }
 }
