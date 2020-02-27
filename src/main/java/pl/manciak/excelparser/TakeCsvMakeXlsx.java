@@ -15,10 +15,10 @@ public class TakeCsvMakeXlsx {
         //Blank workbook
         XSSFWorkbook workbook = new XSSFWorkbook();
         //Create a blank sheet
-        XSSFSheet sheet = workbook.createSheet("Employee Data");
+        XSSFSheet sheet = workbook.createSheet("Data");
 
         //Stream to Read Csv file
-        FileReader fileReader = new FileReader("grocery_sample.csv");
+        FileReader fileReader = new FileReader("converted.csv");
         BufferedReader br = new BufferedReader(fileReader);
 
         //read first line
@@ -37,7 +37,7 @@ public class TakeCsvMakeXlsx {
             {
                 Cell cell = row.createCell(cellnum++);
                 if(obj instanceof String)
-                    cell.setCellValue((String)obj);
+                    cell.setCellValue(obj);
             }
             line = br.readLine();
         }
@@ -45,7 +45,7 @@ public class TakeCsvMakeXlsx {
         try
         {
             //Write new file in file system
-            FileOutputStream out = new FileOutputStream(new File("converted.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("converted2.xlsx"));
             workbook.write(out);
             out.close();
             System.out.println("xlsx file written successfully on disk.");
