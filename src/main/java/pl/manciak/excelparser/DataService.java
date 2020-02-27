@@ -26,4 +26,6 @@ public  class DataService {
     public LinesEntity saveOne(LinesEntity linesEntity){
         return linesRepo.save(linesEntity);
     }
+
+
 }
