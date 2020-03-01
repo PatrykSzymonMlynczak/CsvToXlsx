@@ -24,7 +24,7 @@ public class ParseXlsxAndSaveToDb extends ParserParent {
     public void save() throws IOException
     {
 
-        FileInputStream file = new FileInputStream(new File("grocery_sample.xlsx"));
+        FileInputStream file = new FileInputStream(new File("xxx.xlsx"));
 
 
         //Create Workbook instance holding reference to .xlsx file

@@ -7,6 +7,8 @@ import pl.manciak.excelparser.Entity.MapEntity;
 import pl.manciak.excelparser.Repository.LinesRepo;
 import pl.manciak.excelparser.Repository.MapRepo;
 
+import java.util.List;
+
 @Service
 public  class DataService {
 
@@ -26,6 +28,10 @@ public  class DataService {
     public LinesEntity saveOne(LinesEntity linesEntity){
         return linesRepo.save(linesEntity);
     }
+
+    public Iterable<MapEntity> findAll(){return mapRepo.findAll();}
+
+    public List<MapEntity> findAllSaveToList(){return mapRepo.findAll();}
 
 
 }

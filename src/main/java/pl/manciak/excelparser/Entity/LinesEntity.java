@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name="single_line")
+@Table(name = "single_line")
 public class LinesEntity implements Serializable{
 
     @Id

@@ -21,7 +21,7 @@ public class ParseCsvAndSaveToDB extends ParserParent{
 
     public void save() throws IOException {
 
-         //Stream to Read Csv file
+        //Stream to Read Csv file
         FileReader fileReader = new FileReader("usda_sample.csv");
         BufferedReader br = new BufferedReader(fileReader);
 
@@ -30,18 +30,18 @@ public class ParseCsvAndSaveToDB extends ParserParent{
 
 
 
-            while (line != null) {
+        while (line != null) {
 
-                linesEntity = new LinesEntity(); // create a new LinesEntity for this loop execution
-                list = new ArrayList<>();
-                Collections.addAll(list, line.split(","));
-                line = br.readLine();
-                linesEntity.setSingleLine(new ArrayList<>(list));
-                dataService.saveOne(linesEntity);
-                xlsMapped.put(mapKey, linesEntity);
+            linesEntity = new LinesEntity(); // create a new LinesEntity for this loop execution
+            list = new ArrayList<>();
+            Collections.addAll(list, line.split(","));
+            line = br.readLine();
+            linesEntity.setSingleLine(new ArrayList<>(list));
+            dataService.saveOne(linesEntity);
+            xlsMapped.put(mapKey, linesEntity);
 
-                mapKey++;
-            }
+            mapKey++;
+        }
         mapEntity.setMapa(xlsMapped);
 
         System.out.println(xlsMapped);

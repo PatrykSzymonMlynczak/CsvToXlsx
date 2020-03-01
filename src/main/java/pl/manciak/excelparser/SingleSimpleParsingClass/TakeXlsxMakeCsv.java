@@ -1,4 +1,4 @@
-package pl.manciak.excelparser;
+package pl.manciak.excelparser.SingleSimpleParsingClass;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;

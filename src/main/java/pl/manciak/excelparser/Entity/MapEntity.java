@@ -1,5 +1,6 @@
 package pl.manciak.excelparser.Entity;
 
+
 import javax.persistence.*;
 import java.util.Map;
 
