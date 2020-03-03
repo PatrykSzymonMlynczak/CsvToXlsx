@@ -17,7 +17,7 @@ public class ParserParent {
     protected LinesEntity linesEntity;
     protected ArrayList<String> list;
 
-    protected HashMap<Long, LinesEntity> xlsMapped = new HashMap<>();
+    protected HashMap<Long, LinesEntity> xlsMapped;
     protected MapEntity mapEntity = new MapEntity();
     long mapKey = 0;
 
@@ -26,6 +26,6 @@ public class ParserParent {
         this.dataService = dataService;
     }
 
-    public void save() throws IOException {}
+    public void saveToDb() throws IOException {}
 
 }

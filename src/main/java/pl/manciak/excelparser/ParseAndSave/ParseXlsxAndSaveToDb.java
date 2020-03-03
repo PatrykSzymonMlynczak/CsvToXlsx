@@ -21,7 +21,7 @@ public class ParseXlsxAndSaveToDb extends ParserParent {
         super(dataService);
     }
 
-    public void save() throws IOException
+    public void saveToDb() throws IOException
     {
 
         FileInputStream file = new FileInputStream(new File("xxx.xlsx"));

@@ -19,7 +19,7 @@ public class ParseCsvAndSaveToDB extends ParserParent{
         super(dataService);
     }
 
-    public void save() throws IOException {
+    public void saveToDb() throws IOException {
 
         //Stream to Read Csv file
         FileReader fileReader = new FileReader("usda_sample.csv");
