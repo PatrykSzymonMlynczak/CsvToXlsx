@@ -28,25 +28,24 @@ public class ParseCsvAndSaveToDB extends ParserParent{
         //read first line
         String line = br.readLine();
 
-
-
         while (line != null) {
 
             linesEntity = new LinesEntity(); // create a new LinesEntity for this loop execution
             list = new ArrayList<>();
+
             Collections.addAll(list, line.split(","));
             line = br.readLine();
+
             linesEntity.setSingleLine(new ArrayList<>(list));
-            dataService.saveOne(linesEntity);
+            dataService.saveOne(linesEntity); //save single line
             xlsMapped.put(mapKey, linesEntity);
 
             mapKey++;
         }
+
         mapEntity.setMapa(xlsMapped);
-
         System.out.println(xlsMapped);
-
-        dataService.save(mapEntity);
+        dataService.save(mapEntity); //save all
 
         fileReader.close();
         br.close();

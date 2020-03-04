@@ -35,6 +35,7 @@ public class ParseXlsxAndSaveToDb extends ParserParent {
 
         //Iterate through each rows one by one
         Iterator<Row> rowIterator = sheet.iterator();
+
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             //For each row, iterate through all the columns
