@@ -10,11 +10,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-
 @Service
 public class TakeFromDbMakeCsv extends FileSaverParent{
 
-    String s = new String();
     File csvOutputFile = new File("fromDb.csv");
     PrintWriter printWriter = new PrintWriter(csvOutputFile);
 

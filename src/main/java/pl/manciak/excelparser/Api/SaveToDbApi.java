@@ -34,8 +34,6 @@ public class SaveToDbApi {
         this.fileSaverParent = fileSaverParent;
     }
 
-
-
     private ParserParent setParser(ParseCsvAndSaveToDB parseCsvAndSaveToDB,
                                   ParseXlsxAndSaveToDb parseXlsxAndSaveToDb,
                                   String whichParser) {

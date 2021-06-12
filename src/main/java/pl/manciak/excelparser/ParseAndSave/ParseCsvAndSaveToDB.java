@@ -28,6 +28,7 @@ public class ParseCsvAndSaveToDB extends ParserParent{
         //read first line
         String line = br.readLine();
 
+
         while (line != null) {
 
             linesEntity = new LinesEntity(); // create a new LinesEntity for this loop execution
